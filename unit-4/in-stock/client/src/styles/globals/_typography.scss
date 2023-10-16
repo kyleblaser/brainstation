@@ -1,0 +1,94 @@
+// Imports
+@use '../util/' as u;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;500;600;700;800&family=Titillium+Web:wght@400;600&display=swap');
+
+// Text Styles (Default = Mobile)
+
+// Page Header
+h1 {
+	font-size: 2.8rem;
+	line-height: 3.6rem;
+	font-weight: 600;
+
+	@include u.tablet {
+		font-size: 3.2rem;
+		line-height: 4rem;
+	}
+}
+
+//Sub Header
+h2 {
+	font-size: 2rem;
+	line-height: 2.8rem;
+
+	@include u.tablet {
+		font-size: 2.4rem;
+		line-height: 3.2rem;
+	}
+}
+
+//Labels, Links & Buttons
+h3 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+
+	@include u.tablet {
+		font-size: 1.3rem;
+		line-height: 2rem;
+
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+	}
+}
+
+// Table Header
+h4 {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+
+	@include u.tablet {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+}
+
+//Body Large
+.p1 {
+	font-size: 1.5rem;
+	line-height: 2.6rem;
+
+	@include u.tablet {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+	}
+}
+
+//Body Medium
+.p2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+
+	@include u.tablet {
+		font-size: 1.4rem;
+		line-height: 2.8rem;
+	}
+}
+
+//Body Small
+.p3 {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+
+	@include u.tablet {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}

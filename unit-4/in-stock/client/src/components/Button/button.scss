@@ -1,0 +1,75 @@
+//Imports
+@use '../../styles/util/' as u;
+
+.button {
+	height: 3.6rem;
+	padding: 0 1.6rem;
+	width: 100%;
+	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+
+	@include u.tablet {
+		height: 3.8rem;
+		width: 12.8rem;
+	}
+
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text {
+		font-size: 1.3rem;
+		margin: 0;
+
+		&--small {
+			display: none;
+
+			@include u.tablet {
+				display: block;
+			}
+		}
+	}
+
+	&--primary {
+		background-color: u.$Instock-Indigo;
+		color: u.$White;
+		border-color: u.$Instock-Indigo;
+	}
+
+	&--secondary {
+	}
+
+	&--small {
+		background-color: u.$Instock-Indigo;
+		color: u.$White;
+		border-color: u.$Instock-Indigo;
+		height: 3.2rem;
+		width: 3.2rem;
+		border-radius: 2rem;
+		padding: 0;
+
+		img {
+			display: block;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		@include u.tablet {
+			width: 8.1rem;
+			height: 3.4rem;
+			padding: 0.8rem 1.6rem;
+		}
+	}
+
+	&__icon {
+		display: none;
+		filter: brightness(0) invert(1);
+
+		@include u.tablet {
+			display: block;
+		}
+	}
+}

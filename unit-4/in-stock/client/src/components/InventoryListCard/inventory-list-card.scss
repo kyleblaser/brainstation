@@ -1,0 +1,65 @@
+@use '../../styles/util/' as u;
+
+.inventory-list-card {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 2rem;
+	padding: 1.6rem 0 2.4rem 0;
+
+	@include u.tablet {
+		display: none;
+	}
+
+	&__cell {
+		width: 50%;
+	}
+
+	&__table {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-template-areas: "item status" "category qty" ". warehouse" "delete edit";
+		row-gap: 1.6rem;
+		column-gap: 3rem;
+		padding-top: 1.6rem;
+	}
+
+	&__header {
+		text-transform: uppercase;
+		font-size: 1.1rem;
+		color: u.$Slate;
+		font-weight: 600;
+		margin: 0 0 0.4rem 0;
+
+		@include u.tablet {
+			display: none;
+		}
+	}
+
+	&__description {
+		font-size: 1.3rem;
+		margin: 0;
+
+		&--indigo {
+			color: u.$Instock-Indigo;
+			font-weight: 600;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon {
+		&--edit {
+			margin-left: auto;
+		}
+	}
+
+	&__divider {
+		height: 1px;
+		background-color: u.$Cloud;
+		width: 100%;
+	}
+}

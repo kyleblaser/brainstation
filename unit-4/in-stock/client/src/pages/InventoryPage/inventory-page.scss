@@ -1,0 +1,50 @@
+//Imports
+@use '../../styles/util' as u;
+
+.inventory-page {
+	padding: 0 2.4rem;
+	box-shadow: 0 2px 5px 0 #13182C1A;
+
+	@include u.tablet {
+		// padding: 0 3.2rem;
+		padding: 0;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		padding: 3.2rem 0 2.4rem 0;
+
+		@include u.tablet {
+			flex-direction: row;
+			justify-content: space-between;
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+
+		@include u.desktop {
+			padding-left: 7.5rem;
+			padding-right: 7.5rem;
+		}
+	}
+
+	&__header-aside {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+
+		@include u.tablet {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		margin-bottom: 0;
+
+		@include u.tablet {
+			margin-top: 0;
+		}
+	}
+}

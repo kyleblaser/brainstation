@@ -1,0 +1,101 @@
+//Imports
+@use '../../styles/util/' as u;
+
+.item-details-card {
+	padding: 3.2rem 0 2.4rem 0;
+
+	@include u.tablet {
+		padding-left: 0.8rem;
+		padding-right: 0.8rem;
+	}
+
+	&__body {
+		@include u.tablet {
+			display: flex;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__divider {
+		height: 1px;
+		background-color: u.$Cloud;
+		margin: 2.4rem -2.4rem 1.2rem -2.4rem;
+
+		@include u.tablet {
+			margin-left: -3.2rem;
+			margin-right: -3.2rem;
+		}
+	}
+
+	&__aside {
+		@include u.tablet {
+			width: 50%;
+		}
+		&--right {
+			@include u.tablet {
+				padding-left: 4rem;
+			}
+		}
+
+		&--left {
+			@include u.tablet {
+				border-right: 1px solid u.$Cloud;
+			}
+		}
+	}
+
+	&__item-name {
+		margin: 0;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 0.9rem;
+	}
+
+	&__section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		margin-bottom: 1.6rem;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		gap: 7.5rem;
+	}
+
+	&__sub-header {
+		text-transform: uppercase;
+		font-size: 1.1rem;
+		color: u.$Slate;
+		font-weight: 600;
+		margin-bottom: 0.04rem;
+
+		@include u.tablet {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__content {
+		margin: 0;
+		font-size: 1.3rem;
+
+		@include u.tablet {
+			font-size: 1.4rem;
+		}
+
+		&--long {
+			@include u.tablet {
+				width: 80%;
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+@use '../../styles/util/' as u;
+
+.divider {
+	height: 1px;
+	background-color: u.$Cloud;
+	margin: 0 -2.4rem;
+}

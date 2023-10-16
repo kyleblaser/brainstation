@@ -1,0 +1,86 @@
+//Imports
+@use '../../styles/util/' as u;
+
+.inventory-list-table {
+	display: none;
+	width: 100%;
+	table-layout: auto;
+	border-collapse: collapse;
+
+	@include u.tablet {
+		display: table;
+	}
+
+	&__row {
+		&--header {
+			background: rgba(247, 248, 249, 0.7);
+		}
+
+		&--cell:hover {
+			background-color: rgba(46, 102, 229, 0.07);
+		}
+	}
+
+	&__placeholder {
+		width: 3.2rem;
+	}
+
+	&__header {
+		display: none;
+
+		@include u.tablet {
+			display: flex;
+			align-items: center;
+			gap: 0.4rem;
+		}
+	}
+
+	&__header-icon {
+		height: 1.8rem;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: u.$Slate;
+		font-size: 1.2rem;
+		margin: 0;
+	}
+
+	&__cell {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__cell-content {
+		font-size: 1.4rem;
+
+		&--indigo {
+			color: u.$Instock-Indigo;
+			font-weight: 600;
+		}
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__action {
+		display: flex;
+		gap: 1.6rem;
+	}
+
+	&__divider {
+		display: none;
+
+		@include u.tablet {
+			display: table-row;
+		}
+	}
+
+	&__border {
+		border-bottom: 1px solid u.$Cloud;
+		position: relative;
+		top: -40px;
+	}
+}
